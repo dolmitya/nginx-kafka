@@ -24,7 +24,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
   producer1:
-    build: ./demo
+    build: ./kafka-producer
     container_name: producer1
     environment:
       - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
@@ -34,7 +34,7 @@ services:
       - "8080"
 
   producer2:
-    build: ./demo
+    build: ./kafka-producer
     container_name: producer2
     environment:
       - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
@@ -44,7 +44,7 @@ services:
       - "8080"
 
   producer3:
-    build: ./demo
+    build: ./kafka-producer
     container_name: producer3
     environment:
       - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
